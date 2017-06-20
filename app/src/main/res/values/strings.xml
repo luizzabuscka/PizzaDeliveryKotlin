@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Pizza Delivery</string>
+
+    <string name="hint_login">Login</string>
+    <string name="hint_password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="empty_login">Login vazio</string>
+    <string name="empty_password">Senha vazia</string>
+    <string name="wrong_login_or_pass">Login ou senha incoretos</string>
+
+</resources>
