@@ -1,0 +1,6 @@
+COMMAND=PREDEX_LIBRARY_TO_DEX_ARCHIVE
+FILE_PATH=/Users/luizzabuscka/Documents/Android/Github/PizzaDeliveryKotlin/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar
+FILE_HASH=d7cc6386ab0aae7b193108be0d5786c8932bde32
+DX_VERSION=1.13
+JUMBO_MODE=true
+OPTIMIZE=true

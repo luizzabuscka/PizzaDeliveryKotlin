@@ -8,5 +8,4 @@ import android.content.Intent
 interface ILoginActivity {
     fun showError(errorType: Int)
     fun callNextActivity(it: Intent)
-
 }
