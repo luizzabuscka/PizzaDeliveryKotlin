@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.luizzabuscka.pizzadelivery.R
+import com.luizzabuscka.pizzadelivery.presenter.ILoginPresenter
 import com.luizzabuscka.pizzadelivery.presenter.LoginPresenter
 import com.luizzabuscka.pizzadelivery.util.ErrorsUtil
 import kotlinx.android.synthetic.main.activity_login.*
@@ -13,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_login.*
 class LoginActivity : AppCompatActivity(), ILoginActivity {
 
 
-    val presenter: LoginPresenter = LoginPresenter(this)
+    val presenter: ILoginPresenter = LoginPresenter(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
