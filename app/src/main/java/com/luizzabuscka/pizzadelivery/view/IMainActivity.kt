@@ -1,6 +1,7 @@
 package com.luizzabuscka.pizzadelivery.view
 
 import android.widget.ArrayAdapter
+import com.luizzabuscka.pizzadelivery.adapters.ProductsAdapter
 import com.luizzabuscka.pizzadelivery.entities.Product
 
 /**
@@ -8,7 +9,8 @@ import com.luizzabuscka.pizzadelivery.entities.Product
  */
 interface IMainActivity {
 
-    fun fillList(adapter: ArrayAdapter<Product>)
+    fun fillList(adapter: ProductsAdapter)
+    fun itemClicked(product: Product)
     fun showError(errorCode: Int)
 
 }

@@ -2,6 +2,8 @@ package com.luizzabuscka.pizzadelivery.presenter
 
 import android.util.Log
 import android.widget.ArrayAdapter
+import com.luizzabuscka.pizzadelivery.R
+import com.luizzabuscka.pizzadelivery.adapters.ProductsAdapter
 import com.luizzabuscka.pizzadelivery.entities.Product
 import com.luizzabuscka.pizzadelivery.repositories.ProductsRepository
 import com.luizzabuscka.pizzadelivery.services.Factory
@@ -25,7 +27,9 @@ class MainPresenter(val activity: MainActivity) : IMainPresenter {
                 .subscribeOn(Schedulers.io())
                 .subscribe({
                     result ->
-                    val adapter = ArrayAdapter<Product>(activity, android.R.layout.simple_list_item_1, result)
+                    val adapter = ProductsAdapter(result, R.layout.item_product) {
+                        activity.itemClicked(it)
+                    }
                     activity.fillList(adapter)
                 }, {
                     error ->

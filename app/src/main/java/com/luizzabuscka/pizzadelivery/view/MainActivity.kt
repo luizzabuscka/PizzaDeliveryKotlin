@@ -1,12 +1,14 @@
 package com.luizzabuscka.pizzadelivery.view
 
-import android.widget.ArrayAdapter
+import android.support.v7.widget.GridLayoutManager
 import android.widget.Toast
+import com.luizzabuscka.pizzadelivery.adapters.ProductsAdapter
 import com.luizzabuscka.pizzadelivery.entities.Product
 import com.luizzabuscka.pizzadelivery.presenter.MainPresenter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : android.support.v7.app.AppCompatActivity(), IMainActivity {
+
 
     var presenter: MainPresenter = MainPresenter(this)
 
@@ -17,11 +19,15 @@ class MainActivity : android.support.v7.app.AppCompatActivity(), IMainActivity {
         presenter.getProducts()
     }
 
-    override fun fillList(adapter: ArrayAdapter<Product>) {
+    override fun fillList(adapter: ProductsAdapter) {
         lvProducts.adapter = adapter
     }
 
     override fun showError(errorCode: Int) {
         Toast.makeText(this, "Erro ao carregar lista", Toast.LENGTH_LONG).show()
+    }
+
+    override fun itemClicked(product: Product) {
+        Toast.makeText(this, "Produto: ${product.name}", Toast.LENGTH_LONG).show()
     }
 }

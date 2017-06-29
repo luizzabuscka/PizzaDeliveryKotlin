@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.luizzabuscka.pizzadelivery.view.MainActivity">
 
-    <ListView
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/lvProducts"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -18,5 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layoutManager="android.support.v7.widget.GridLayoutManager"
+        app:spanCount="1"
         tools:layout_editor_absoluteX="8dp" />
+
 </android.support.constraint.ConstraintLayout>
